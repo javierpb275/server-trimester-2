@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <style type="text/css">
+        .color {
+            background-color: #FF9999;
+            color: #000000;
+            font-family: Arial;
+            font-size: 12px;
+        }
+
+        input.color1 {
+            background-color: #00CC99;
+            font-weight: bold;
+            font-size: 12px;
+            color: white;
+        }
+    </style>
+    <div class='color' id='panelo'></div>
+    <script>
+        $(document).ready(function () {
+            $.getJSON("http://localhost:3000/", function (registros) {
+                //const registros=JSON.parse(result);
+                lista = "";
+                for (i = 0; i < registros.length; i++)
+                    lista += ('<BR>' + registros[i].fecha + ", puerto:" + registros[i].puerto + ", modo:" + registros[i].modo);
+                $("#panelo").html(lista);
+            }
+            );
+        });
+    </script>
+</body>
+
+</html>

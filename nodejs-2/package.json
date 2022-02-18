@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "dev": "nodemon src/main.js",
+    "start": "node src/index.js -p 3000 -m development"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^5.2.0"
+  }
+}
